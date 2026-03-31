@@ -26,6 +26,8 @@ jobs:
         uses: docker/metadata-action@030e881283bb7a6894de51c315a6bfe6a94e05cf
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
       - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@d08e5c354a6adb9ed34480a06d141179aa583294
