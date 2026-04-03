@@ -4,6 +4,7 @@ RUN apt-get update && \
     apt-get -y install --no-install-recommends \
         autoconf \
         build-essential \
+        ca-certificates \
         curl \
         libc-ares2 \
         libcap2 \
