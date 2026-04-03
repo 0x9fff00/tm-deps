@@ -1,7 +1,7 @@
 FROM debian/eol:wheezy
 
 RUN apt-get update && \
-    apt-get -y install \
+    apt-get -y install --no-install-recommends \
         autoconf \
         build-essential \
         curl \
@@ -71,10 +71,11 @@ RUN apt-get update && \
     apt-get -y autoremove --purge \
         autoconf \
         build-essential \
-        curl \
         libglu1-mesa-dev \
         libgtk2.0-dev \
         libjpeg8-dev \
         libtiff5-dev \
         mesa-common-dev \
-        pkg-config
+        pkg-config \
+        && \
+    apt-get -y autoremove --purge
