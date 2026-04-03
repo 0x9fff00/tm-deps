@@ -3,6 +3,7 @@ FROM debian/eol:wheezy
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
         autoconf \
+        automake \
         build-essential \
         ca-certificates \
         curl \
@@ -71,6 +72,7 @@ RUN apt-get update && \
     rm -rf /build && \
     apt-get -y autoremove --purge \
         autoconf \
+        automake \
         build-essential \
         libglu1-mesa-dev \
         libgtk2.0-dev \
