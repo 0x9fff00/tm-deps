@@ -1,29 +1,31 @@
 FROM debian/eol:wheezy
 
 RUN apt-get update && \
-    apt-get -y install autoconf \
-                       build-essential \
-                       curl \
-                       libc-ares2 \
-                       libcap2 \
-                       libgcrypt11 \
-                       libgl1-mesa-swx11 \
-                       libglu1-mesa \
-                       libglu1-mesa-dev \
-                       libgnutls26 \
-                       libgpg-error0 \
-                       libgtk2.0-0 \
-                       libgtk2.0-dev \
-                       libjpeg8 \
-                       libjpeg8-dev \
-                       libsqlite3-0 \
-                       libssh2-1 \
-                       libssl1.0.0 \
-                       libtasn1-3 \
-                       libtiff5 \
-                       libtiff5-dev \
-                       mesa-common-dev \
-                       pkg-config && \
+    apt-get -y install \
+        autoconf \
+        build-essential \
+        curl \
+        libc-ares2 \
+        libcap2 \
+        libgcrypt11 \
+        libgl1-mesa-swx11 \
+        libglu1-mesa \
+        libglu1-mesa-dev \
+        libgnutls26 \
+        libgpg-error0 \
+        libgtk2.0-0 \
+        libgtk2.0-dev \
+        libjpeg8 \
+        libjpeg8-dev \
+        libsqlite3-0 \
+        libssh2-1 \
+        libssl1.0.0 \
+        libtasn1-3 \
+        libtiff5 \
+        libtiff5-dev \
+        mesa-common-dev \
+        pkg-config \
+        && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir /build && \
     cd /build && \
@@ -66,12 +68,13 @@ RUN apt-get update && \
     \
     cd / && \
     rm -rf /build && \
-    apt-get -y autoremove --purge autoconf \
-                                  build-essential \
-                                  curl \
-                                  libglu1-mesa-dev \
-                                  libgtk2.0-dev \
-                                  libjpeg8-dev \
-                                  libtiff5-dev \
-                                  mesa-common-dev \
-                                  pkg-config
+    apt-get -y autoremove --purge \
+        autoconf \
+        build-essential \
+        curl \
+        libglu1-mesa-dev \
+        libgtk2.0-dev \
+        libjpeg8-dev \
+        libtiff5-dev \
+        mesa-common-dev \
+        pkg-config
