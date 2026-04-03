@@ -19,6 +19,8 @@ RUN apt-get update && \
         libgtk2.0-dev \
         libjpeg8 \
         libjpeg8-dev \
+        libsm6 \
+        libsm-dev \
         libsqlite3-0 \
         libssh2-1 \
         libssl1.0.0 \
@@ -76,6 +78,7 @@ RUN apt-get update && \
         libglu1-mesa-dev \
         libgtk2.0-dev \
         libjpeg8-dev \
+        libsm-dev \
         libtiff5-dev \
         mesa-common-dev \
         pkg-config \
