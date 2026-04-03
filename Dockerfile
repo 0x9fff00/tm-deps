@@ -28,7 +28,6 @@ RUN apt-get update && \
         mesa-common-dev \
         pkg-config \
         && \
-    rm -rf /var/lib/apt/lists/* && \
     mkdir /build && \
     cd /build && \
     curl -Lo config.guess https://git.savannah.gnu.org/cgit/config.git/plain/config.guess?id=a2287c3041a3f2a204eb942e09c015eab00dc7dd && \
@@ -81,4 +80,4 @@ RUN apt-get update && \
         mesa-common-dev \
         pkg-config \
         && \
-    apt-get -y autoremove --purge
+    rm -rf /var/lib/apt/lists/*
